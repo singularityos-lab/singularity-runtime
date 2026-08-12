@@ -1,0 +1,11 @@
+NAME="Singularity Runtime"
+PRETTY_NAME="Singularity Runtime"
+ID=singularity-runtime
+ID_LIKE="ubuntu debian"
+VERSION_ID="26.04"
+VERSION="26.04"
+VERSION_CODENAME=resolute
+UBUNTU_CODENAME=resolute
+HOME_URL="https://singularityos.com/"
+SUPPORT_URL="https://github.com/singularityos-lab/singularity-desktop/issues"
+LOGO=emblem-singularity

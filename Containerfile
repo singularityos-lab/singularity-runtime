@@ -2,6 +2,8 @@ FROM ghcr.io/containerpak/gtk:main
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+COPY os-release /usr/lib/os-release
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       adwaita-icon-theme \
@@ -52,6 +54,7 @@ RUN apt-get update && \
       xdg-desktop-portal \
       xdg-user-dirs \
       xwayland && \
+    ln -sfn ../usr/lib/os-release /etc/os-release && \
     cpak-clean-junk
 
 LABEL org.opencontainers.image.source="https://github.com/singularityos-lab/singularity-runtime"
