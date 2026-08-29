@@ -85,12 +85,10 @@ jobs:
         env:
           CPAK_REGISTRY_USERNAME: ${{ github.actor }}
           CPAK_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          IMAGE_DIGEST: ${{ steps.build.outputs.digest }}
         run: |
           cpak-sign state \
             --origin github.com/singularityos-lab/singularity-runtime \
-            --generation "${{ github.run_number }}" \
-            --image-digest "$IMAGE_DIGEST"
+            --generation "${{ github.run_number }}"
           cosign sign-blob --yes --new-bundle-format=true \
             --bundle cpak-state.sigstore.json cpak-state
           cpak-sign attach --image ghcr.io/singularityos-lab/singularity-runtime-cpak
