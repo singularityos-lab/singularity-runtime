@@ -1,10 +1,10 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Singularity Runtime",
   "description": "Runtime component for Singularity Desktop.",
   "version": "0.1.0",
-  "image": "ghcr.io/singularityos-lab/singularity-runtime-cpak:main",
+  "image": "ghcr.io/singularityos-lab/singularity-runtime-cpak@sha256:bcf41d1725be168041424595fd7622bf6079381d504040e752cb656065c00ad3",
   "binaries": [
     "/usr/bin/dbus-run-session"
   ],
@@ -12,16 +12,13 @@
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": false,
+    "displayX11": false,
     "socketWayland": false,
     "socketPulseAudio": false,
-    "socketSessionBus": false,
-    "socketSystemBus": false,
     "socketSshAgent": false,
     "socketCups": false,
     "socketGpgAgent": false,
-    "socketAtSpiBus": false,
-    "socketBluetooth": false,
+    "bluetooth": false,
     "deviceDri": false,
     "deviceKvm": false,
     "deviceShm": false,
@@ -30,18 +27,22 @@
     "deviceFuse": false,
     "deviceTun": false,
     "deviceUsb": false,
+    "deviceSerial": false,
+    "deviceInput": false,
+    "deviceTTY": false,
     "deviceAll": false,
     "notification": false,
     "openURI": false,
+    "hostApplications": false,
     "filesystem": [],
     "env": [],
     "network": false,
+    "hostNetwork": false,
     "process": false,
     "userNamespaces": false,
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
