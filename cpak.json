@@ -4,7 +4,7 @@
   "name": "Singularity Runtime",
   "description": "Runtime component for Singularity Desktop.",
   "version": "0.1.0",
-  "image": "ghcr.io/singularityos-lab/singularity-runtime-cpak@sha256:0683ac0da29670f0a7725a63c46e27549bab65c8a63e0c51f2f7864392766b2f",
+  "image": "ghcr.io/singularityos-lab/singularity-runtime-cpak@sha256:8e6533383e449a337ab96dc24471ff03f26875ada940a371f3bd57884808222f",
   "binaries": [
     "/usr/bin/dbus-run-session"
   ],
